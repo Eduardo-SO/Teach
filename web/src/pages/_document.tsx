@@ -1,5 +1,7 @@
 import React from 'react'
 
+import favicon from '../assets/images/favicon.ico'
+
 import Document, {
   DocumentContext,
   DocumentInitialProps,
@@ -49,7 +51,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <link rel="icon" href="../assets/images/favicon.ico" />
+          <link rel="icon" href={favicon} />
         </Head>
         <body>
           <Main />
