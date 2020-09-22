@@ -6,8 +6,6 @@ const Home: React.FC = () => {
     <div>
       <Head>
         <title>Homepage</title>
-
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
