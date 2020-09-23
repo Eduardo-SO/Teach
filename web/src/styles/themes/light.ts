@@ -2,15 +2,18 @@ export default {
   title: 'light',
 
   colors: {
-    background_gradient: 'linear-gradient(135deg, #5200FF, #00A3FF)',
-    background_primary: '#EEF9FF',
-    background_secondary: '#5200FF',
-    background_tertiary: '#00A3FF',
+    background: {
+      gradient: 'linear-gradient(135deg, #5200FF, #00A3FF)',
+      primary: '#EEF9FF',
+      secondary: '#5200FF',
+      tertiary: '#00A3FF'
+    },
 
-    text_primary: '#333333',
-    text_primary_light: '#4F4F4F',
-    text_secondary: '#EEF9FF',
-
-    text_contrast: '#00A3FF'
+    text: {
+      primary: '#333333',
+      primary_light: '#4F4F4F',
+      secondary: '#EEF9FF',
+      contrast: '#00A3FF'
+    }
   }
 }

@@ -8,8 +8,8 @@ export default createGlobalStyle`
   }
 
   body {
-    color: ${props => props.theme.colors.text_primary};
-    background: ${props => props.theme.colors.background_primary};
+    color: ${props => props.theme.colors.text.primary};
+    background: ${props => props.theme.colors.background.primary};
 
     font: 400 16px 'Poppins';
   }
