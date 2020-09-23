@@ -9,6 +9,8 @@ export default {
 
     text_primary: '#333333',
     text_primary_light: '#4F4F4F',
-    text_secondary: '#00A3FF'
+    text_secondary: '#EEF9FF',
+
+    text_contrast: '#00A3FF'
   }
 }
