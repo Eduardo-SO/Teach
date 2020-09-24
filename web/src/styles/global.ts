@@ -9,7 +9,7 @@ export default createGlobalStyle`
 
   body {
     color: ${props => props.theme.colors.text.primary};
-    background: ${props => props.theme.colors.background.primary};
+    background-color: ${props => props.theme.colors.background.primary};
 
     font: 400 16px 'Poppins';
   }
