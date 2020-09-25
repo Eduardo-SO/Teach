@@ -1,6 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 
+import { Container, Wrapper, Apresentation, Hero } from '../styles/pages/Home'
+
 const Home: React.FC = () => {
   return (
     <div>
@@ -9,7 +11,14 @@ const Home: React.FC = () => {
       </Head>
 
       <main>
-        <h1>Hello world!</h1>
+        <Container>
+          <Wrapper>
+            <Apresentation>
+              <h1>Hello world!</h1>
+            </Apresentation>
+            <Hero />
+          </Wrapper>
+        </Container>
       </main>
     </div>
   )
