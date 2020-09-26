@@ -7,7 +7,5 @@ export const Container = styled.div`
 
   height: 80px;
   padding: 0 80px;
-
-  /* background: ${props => props.theme.colors.background.tertiary};
-  color: ${props => props.theme.colors.text.secondary}; */
+  margin-bottom: -80px;
 `
