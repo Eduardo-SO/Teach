@@ -5,7 +5,7 @@ import { Container, Wrapper, Apresentation, Hero } from '../styles/pages/Home'
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Homepage</title>
       </Head>
@@ -16,11 +16,13 @@ const Home: React.FC = () => {
             <Apresentation>
               <h1>Hello world!</h1>
             </Apresentation>
-            <Hero />
+            <Hero>
+              <img src="/images/hero.svg" alt="Teach" />
+            </Hero>
           </Wrapper>
         </Container>
       </main>
-    </div>
+    </>
   )
 }
 
