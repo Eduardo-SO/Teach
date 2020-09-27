@@ -10,6 +10,9 @@ export default createGlobalStyle`
 
   body {
     background-color: ${props => props.theme.colors.background.primary};
+
+    transition: color 0.2s;
+    transition: background 0.2s;
   }
 
   body,
@@ -20,6 +23,11 @@ export default createGlobalStyle`
 
     -webkit-font-smoothing: antialiased;
     font: 400 16px 'Poppins';
+  }
+
+  input {
+    transition: color 0.2s;
+    transition: background 0.2s;
   }
 
   #__next, body, main {
