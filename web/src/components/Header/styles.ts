@@ -5,9 +5,9 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  height: 80px;
-  padding: 0 80px;
-  margin-bottom: -80px;
+  height: 8rem;
+  padding: 0 8rem;
+  margin-bottom: -8rem;
 
   h1 {
     background: ${props => props.theme.colors.background.gradient};

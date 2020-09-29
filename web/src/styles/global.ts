@@ -8,6 +8,14 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  :root {
+    font-size: 60%;
+
+    @media(min-width: 700px) {
+      font-size: 62.5%;
+    }
+  }
+
   body {
     background-color: ${props => props.theme.colors.background.primary};
 
@@ -22,7 +30,7 @@ export default createGlobalStyle`
     color: ${props => props.theme.colors.text.primary};
 
     -webkit-font-smoothing: antialiased;
-    font: 400 16px 'Poppins';
+    font: 400 1.6rem 'Poppins';
   }
 
   input {

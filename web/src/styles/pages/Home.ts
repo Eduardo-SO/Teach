@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
 
   height: 100%;
   width: 100%;
-  max-width: 1440px;
+  max-width: 144rem;
 `
 
 export const Apresentation = styled.div`
@@ -29,25 +29,25 @@ export const Content = styled.div`
   max-width: 320px;
 
   h2 {
-    font-size: 64px;
-    margin-bottom: 16px;
+    font-size: 6.4rem;
+    margin-bottom: 1.6rem;
   }
 
   h3 {
     color: ${props => props.theme.colors.text.contrast};
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 400;
 
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
   }
 
   ul {
     list-style: none;
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
 
     strong {
       color: ${props => props.theme.colors.text.contrast};
-      font-size: 24px;
+      font-size: 2.4rem;
     }
   }
 
@@ -56,15 +56,15 @@ export const Content = styled.div`
     flex-direction: column;
 
     input {
-      height: 45px;
-      padding: 0 16px;
+      height: 4.5rem;
+      padding: 0 1.6rem;
       border: 1px solid ${props => props.theme.colors.text.contrast};
 
       background: ${props => props.theme.colors.background.primary};
     }
 
     button {
-      height: 45px;
+      height: 4.5rem;
       border: none;
       border-radius: 0 0 8px 8px;
 
@@ -76,7 +76,7 @@ export const Content = styled.div`
 
     input:nth-child(1) {
       border-radius: 8px 8px 0 0;
-      margin-bottom: -1px;
+      margin-bottom: -0.1rem;
     }
   }
 `
