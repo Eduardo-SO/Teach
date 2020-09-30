@@ -15,10 +15,16 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
 
   height: 100%;
   width: 100%;
   max-width: 144rem;
+  padding: 8rem 8rem 0;
+
+  @media (min-width: 700px) {
+    flex-direction: row;
+  }
 `
 
 export const Apresentation = styled.div`
@@ -89,6 +95,13 @@ export const Hero = styled.div`
   height: 100%;
 
   img {
-    height: 75%;
+    display: hidden;
+  }
+
+  @media (min-width: 700px) {
+    img {
+      display: block;
+      height: 75%;
+    }
   }
 `

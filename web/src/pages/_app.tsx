@@ -3,7 +3,6 @@ import { AppProps } from 'next/app'
 import { ThemeProvider, DefaultTheme } from 'styled-components'
 
 import usePersistedState from '../utils/usePersistedState'
-import Header from '../components/Header'
 
 import GlobalStyles from '../styles/global'
 import light from '../styles/themes/light'
@@ -18,9 +17,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Header toggleTheme={toggleTheme} />
-
-      <Component {...pageProps} />
+      <Component {...pageProps} toggleTheme={toggleTheme} />
       <GlobalStyles />
     </ThemeProvider>
   )

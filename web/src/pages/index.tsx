@@ -1,6 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 
+import Header from '../components/Header'
+
 import {
   Container,
   Wrapper,
@@ -9,7 +11,11 @@ import {
   Hero
 } from '../styles/pages/Home'
 
-const Home: React.FC = () => {
+interface Props {
+  toggleTheme(): void
+}
+
+const Home: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <>
       <Head>
@@ -18,6 +24,7 @@ const Home: React.FC = () => {
 
       <main>
         <Container>
+          <Header toggleTheme={toggleTheme} />
           <Wrapper>
             <Apresentation>
               <Content>
