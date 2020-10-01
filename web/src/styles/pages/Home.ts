@@ -140,6 +140,8 @@ export const Description = styled.div`
   }
 
   @media (min-width: 980px) {
+    max-width: 50rem;
+
     h2 {
       font-size: 6.4rem;
     }
@@ -176,6 +178,8 @@ export const Contact = styled.div`
   }
 
   @media (min-width: 980px) {
+    max-width: 50rem;
+
     h2 {
       font-size: 6.4rem;
     }
