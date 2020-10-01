@@ -9,6 +9,12 @@ export const Container = styled.div`
   width: 100%;
   margin-bottom: -8rem;
 
+  padding: 0 4rem;
+
+  @media (min-width: 980px) {
+    padding: 0 8rem;
+  }
+
   h1 {
     background: ${props => props.theme.colors.background.gradient};
 
