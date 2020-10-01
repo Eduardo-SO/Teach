@@ -125,17 +125,54 @@ export const Hero = styled.div`
     }
   }
 `
+
 export const Description = styled.div`
-  max-width: 50rem;
+  max-width: 32rem;
 
   h2 {
     margin-bottom: 4rem;
     color: ${props => props.theme.colors.text.contrast};
-    font-size: 4.8rem;
+    font-size: 4rem;
   }
 
   h3 {
     color: ${props => props.theme.colors.text.primary_light};
+  }
+
+  @media (min-width: 980px) {
+    h2 {
+      font-size: 6.4rem;
+    }
+  }
+`
+export const Contact = styled.div`
+  max-width: 32rem;
+
+  h2 {
+    color: ${props => props.theme.colors.text.contrast};
+    font-size: 4rem;
+  }
+
+  h3 {
+    margin: 4rem 0;
+    color: ${props => props.theme.colors.text.primary_light};
+  }
+
+  ul {
+    list-style: none;
+    color: ${props => props.theme.colors.text.primary_light};
+    font-weight: 600;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      margin-top: 1.6rem;
+
+      img {
+        margin-right: 0.8rem;
+      }
+    }
   }
 
   @media (min-width: 980px) {

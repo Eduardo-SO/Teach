@@ -9,7 +9,8 @@ import {
   Content,
   Hero,
   Apresentation,
-  Description
+  Description,
+  Contact
 } from '../styles/pages/Home'
 
 interface Props {
@@ -71,6 +72,27 @@ const Home: React.FC<Props> = ({ toggleTheme }) => {
                   a encontrar seu nível no inglês.
                 </h3>
               </Description>
+            </Content>
+
+            <Content>
+              <Contact>
+                <h2>Caso tenha alguma dúvida</h2>
+                <h3>Entre em contato conosco</h3>
+
+                <ul>
+                  <li>
+                    <img src="/images/icons/mail.svg" alt="Teach" />
+                    contato@teach.com.br
+                  </li>
+                  <li>
+                    <img src="/images/icons/whatsapp.svg" alt="Teach" />
+                    (12) 34567-8910
+                  </li>
+                </ul>
+              </Contact>
+              <Hero>
+                <img src="/images/hero3.svg" alt="Teach" />
+              </Hero>
             </Content>
           </Wrapper>
         </Container>
