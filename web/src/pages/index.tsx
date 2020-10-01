@@ -10,7 +10,8 @@ import {
   Hero,
   Apresentation,
   Description,
-  Contact
+  Contact,
+  Footer
 } from '../styles/pages/Home'
 
 interface Props {
@@ -95,6 +96,14 @@ const Home: React.FC<Props> = ({ toggleTheme }) => {
               </Hero>
             </Content>
           </Wrapper>
+          <Footer>
+            <div>
+              <p>© 2020 Teach. Todos os direitos reservados. </p>
+              <p>
+                Desenvolvido pela <strong>One</strong>
+              </p>
+            </div>
+          </Footer>
         </Container>
       </main>
     </>

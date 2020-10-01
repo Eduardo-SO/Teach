@@ -5,11 +5,7 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
 
-  height: 100vh;
-  padding: 0 4rem;
-
   @media (min-width: 980px) {
-    padding: 0 8rem;
     background-image: url('images/background.svg');
     background-repeat: no-repeat;
     background-position: right top;
@@ -36,10 +32,15 @@ export const Wrapper = styled.div`
   height: 100%;
   width: 100%;
   max-width: 144rem;
+  padding: 0 4rem;
+
+  @media (min-width: 980px) {
+    padding: 0 8rem;
+  }
 `
 
 export const Content = styled.div`
-  height: 100%;
+  height: 100vh;
 
   display: flex;
   align-items: center;
@@ -147,6 +148,7 @@ export const Description = styled.div`
     }
   }
 `
+
 export const Contact = styled.div`
   max-width: 32rem;
 
@@ -182,6 +184,49 @@ export const Contact = styled.div`
 
     h2 {
       font-size: 6.4rem;
+    }
+  }
+`
+
+export const Footer = styled.div`
+  display: flex;
+  justify-content: center;
+
+  height: 13rem;
+  width: 100%;
+
+  padding: 0 4rem;
+
+  background: #00a3ff;
+  color: #eef9ff;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 50rem;
+    font-size: 1.4rem;
+
+    p:nth-child(1) {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  @media (min-width: 980px) {
+    padding: 0 4rem;
+
+    > div {
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+
+      width: 100%;
+      max-width: 144rem;
+
+      p:nth-child(1) {
+        margin-bottom: 0;
+      }
     }
   }
 `
