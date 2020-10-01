@@ -6,9 +6,10 @@ import Header from '../components/Header'
 import {
   Container,
   Wrapper,
-  Apresentation,
   Content,
-  Hero
+  Hero,
+  Apresentation,
+  Description
 } from '../styles/pages/Home'
 
 interface Props {
@@ -55,8 +56,21 @@ const Home: React.FC<Props> = ({ toggleTheme }) => {
                 </form>
               </Apresentation>
               <Hero>
-                <img src="/images/hero.svg" alt="Teach" />
+                <img src="/images/hero1.svg" alt="Teach" />
               </Hero>
+            </Content>
+
+            <Content>
+              <Hero>
+                <img src="/images/hero2.svg" alt="Teach" />
+              </Hero>
+              <Description>
+                <h2>Esteja pronto para o mundo</h2>
+                <h3>
+                  Além de fixar o aprendizado, o teste tem o objetivo de ajudar
+                  a encontrar seu nível no inglês.
+                </h3>
+              </Description>
             </Content>
           </Wrapper>
         </Container>

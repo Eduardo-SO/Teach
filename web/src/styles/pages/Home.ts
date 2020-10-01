@@ -15,6 +15,21 @@ export const Container = styled.div`
     background-position: right top;
     background-size: 55% auto;
   }
+
+  h2 {
+    margin-bottom: 1.6rem;
+    font-size: 6.4rem;
+    font-weight: 400;
+    line-height: 100%;
+  }
+
+  h3 {
+    color: ${props => props.theme.colors.text.contrast};
+    font-size: 2.4rem;
+    font-weight: 400;
+
+    margin-bottom: 2.4rem;
+  }
 `
 
 export const Wrapper = styled.div`
@@ -41,16 +56,11 @@ export const Apresentation = styled.div`
   max-width: 32rem;
 
   h2 {
-    font-size: 6.4rem;
-    margin-bottom: 1.6rem;
+    color: ${props => props.theme.colors.text.primary};
   }
 
   h3 {
     color: ${props => props.theme.colors.text.contrast};
-    font-size: 2.4rem;
-    font-weight: 400;
-
-    margin-bottom: 2.4rem;
   }
 
   ul {
@@ -105,9 +115,25 @@ export const Hero = styled.div`
     width: 100%;
     max-width: 70rem;
 
+    &:nth-child(odd) {
+      align-items: center;
+    }
+
     img {
       display: block;
       height: 75%;
     }
+  }
+`
+export const Description = styled.div`
+  max-width: 50rem;
+
+  h2 {
+    margin-bottom: 4rem;
+    color: ${props => props.theme.colors.text.contrast};
+  }
+
+  h3 {
+    color: ${props => props.theme.colors.text.primary_light};
   }
 `
