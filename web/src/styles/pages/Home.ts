@@ -28,7 +28,9 @@ export const Wrapper = styled.div`
 `
 
 export const Apresentation = styled.div`
-  flex: 2;
+  flex: 1;
+
+  margin-top: -80px;
 `
 
 export const Content = styled.div`
