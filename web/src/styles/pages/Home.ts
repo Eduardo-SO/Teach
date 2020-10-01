@@ -131,9 +131,16 @@ export const Description = styled.div`
   h2 {
     margin-bottom: 4rem;
     color: ${props => props.theme.colors.text.contrast};
+    font-size: 4.8rem;
   }
 
   h3 {
     color: ${props => props.theme.colors.text.primary_light};
+  }
+
+  @media (min-width: 980px) {
+    h2 {
+      font-size: 6.4rem;
+    }
   }
 `
