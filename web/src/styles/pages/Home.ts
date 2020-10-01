@@ -2,39 +2,43 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
-  height: 100vh;
+  align-items: center;
+  flex-direction: column;
 
-  background-image: url('images/background.svg');
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: 55% auto;
+  height: 100vh;
+  padding: 0 4rem;
+
+  @media (min-width: 980px) {
+    padding: 0 8rem;
+    background-image: url('images/background.svg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 55% auto;
+  }
 `
 
 export const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-
   height: 100%;
   width: 100%;
   max-width: 144rem;
-  padding: 8rem 8rem 0;
+`
 
-  @media (min-width: 700px) {
+export const Content = styled.div`
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (min-width: 980px) {
+    justify-content: space-between;
     flex-direction: row;
   }
 `
 
 export const Apresentation = styled.div`
-  flex: 1;
-
-  margin-top: -80px;
-`
-
-export const Content = styled.div`
-  max-width: 320px;
+  max-width: 32rem;
 
   h2 {
     font-size: 6.4rem;
@@ -90,17 +94,17 @@ export const Content = styled.div`
 `
 
 export const Hero = styled.div`
-  flex: 3;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  height: 100%;
+  display: none;
 
-  img {
-    display: hidden;
-  }
+  @media (min-width: 980px) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 
-  @media (min-width: 700px) {
+    height: 100%;
+    width: 100%;
+    max-width: 70rem;
+
     img {
       display: block;
       height: 75%;

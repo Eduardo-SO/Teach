@@ -26,8 +26,8 @@ const Home: React.FC<Props> = ({ toggleTheme }) => {
         <Container>
           <Header toggleTheme={toggleTheme} />
           <Wrapper>
-            <Apresentation>
-              <Content>
+            <Content>
+              <Apresentation>
                 <h2>Teach</h2>
                 <h3>Teste seu inglês de maneira rápida e prática</h3>
 
@@ -53,11 +53,11 @@ const Home: React.FC<Props> = ({ toggleTheme }) => {
 
                   <button>Iniciar</button>
                 </form>
-              </Content>
-            </Apresentation>
-            <Hero>
-              <img src="/images/hero.svg" alt="Teach" />
-            </Hero>
+              </Apresentation>
+              <Hero>
+                <img src="/images/hero.svg" alt="Teach" />
+              </Hero>
+            </Content>
           </Wrapper>
         </Container>
       </main>

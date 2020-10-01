@@ -6,7 +6,7 @@ export const Container = styled.div`
   justify-content: space-between;
 
   height: 8rem;
-  padding: 0 8rem;
+  width: 100%;
   margin-bottom: -8rem;
 
   h1 {
