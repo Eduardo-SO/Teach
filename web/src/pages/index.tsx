@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 
 import Header from '../components/Header'
 
@@ -54,7 +55,9 @@ const Home: React.FC<Props> = ({ toggleTheme }) => {
                     placeholder="Informe seu e-mail"
                   />
 
-                  <button>Iniciar</button>
+                  <Link href="/quiz">
+                    <a>Iniciar</a>
+                  </Link>
                 </form>
               </Apresentation>
               <Hero>

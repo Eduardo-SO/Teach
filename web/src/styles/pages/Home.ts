@@ -86,7 +86,11 @@ export const Apresentation = styled.div`
       background: ${props => props.theme.colors.background.primary};
     }
 
-    button {
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       height: 4.5rem;
       border: none;
       border-radius: 0 0 8px 8px;
@@ -94,6 +98,7 @@ export const Apresentation = styled.div`
       background: ${props => props.theme.colors.text.contrast};
       color: #cfd7dc;
 
+      text-decoration: none;
       font-weight: 600;
     }
 
