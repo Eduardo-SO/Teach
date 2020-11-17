@@ -1,6 +1,6 @@
 {
   "exclude": [
-    "prettier.config.ts"
+    "prettier.config.js"
   ],
   "compilerOptions": {
     "target": "es2017",
