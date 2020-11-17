@@ -1,16 +1,15 @@
 import { Router } from 'express'
-import { v4 as uuid } from 'uuid'
+
+import Student from '../models/Student'
 
 const studentsRouter = Router()
 
 studentsRouter.post('/', (request, response) => {
   const { name, email } = request.body
 
-  return response.json({
-    id: uuid(),
-    name,
-    email,
-  })
+  const student = new Student(name, email)
+
+  return response.json(student)
 })
 
 export default studentsRouter
