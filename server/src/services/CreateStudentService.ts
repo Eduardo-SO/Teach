@@ -1,5 +1,6 @@
-import Student from '../models/Student'
+import { getCustomRepository } from 'typeorm'
 
+import Student from '../models/Student'
 import StudentsRepository from '../repositories/StudentsRepository'
 
 interface Request {
@@ -8,23 +9,21 @@ interface Request {
 }
 
 class CreateStudentService {
-  private studentsRepository: StudentsRepository
+  public async execute({ name, email }: Request): Promise<Student> {
+    const studentsRepository = getCustomRepository(StudentsRepository)
 
-  constructor(studentsRepository: StudentsRepository) {
-    this.studentsRepository = studentsRepository
-  }
-
-  public execute({ name, email }: Request): Student {
-    const findStudentWithSameEmail = this.studentsRepository.findByEmail(email)
+    const findStudentWithSameEmail = await studentsRepository.findByEmail(email)
 
     if (findStudentWithSameEmail) {
       throw new Error('An account with this email already exists')
     }
 
-    const student = this.studentsRepository.create({
+    const student = studentsRepository.create({
       name,
       email,
     })
+
+    await studentsRepository.save(student)
 
     return student
   }
