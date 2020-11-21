@@ -16,12 +16,10 @@ export default class CreateStudents1605842199769 implements MigrationInterface {
           {
             name: 'name',
             type: 'varchar',
-            isNullable: false,
           },
           {
             name: 'email',
             type: 'varchar',
-            isNullable: false,
           },
         ],
       }),
