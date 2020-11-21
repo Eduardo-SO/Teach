@@ -21,6 +21,16 @@ export default class CreateStudents1605842199769 implements MigrationInterface {
             name: 'email',
             type: 'varchar',
           },
+          {
+            name: 'created_at',
+            type: 'timestamp',
+            default: 'now()',
+          },
+          {
+            name: 'updated_at',
+            type: 'timestamp',
+            default: 'now()',
+          },
         ],
       }),
     )
