@@ -20,6 +20,7 @@ export default class CreateStudents1605842199769 implements MigrationInterface {
           {
             name: 'email',
             type: 'varchar',
+            isUnique: true,
           },
           {
             name: 'created_at',
