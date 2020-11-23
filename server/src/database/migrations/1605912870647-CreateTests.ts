@@ -14,28 +14,11 @@ export default class CreateTests1605912870647 implements MigrationInterface {
             default: 'uuid_generate_v4()',
           },
           {
-            name: 'question',
-            type: 'varchar',
-          },
-          {
-            name: 'answer_1',
-            type: 'varchar',
-          },
-          {
-            name: 'answer_2',
-            type: 'varchar',
-          },
-          {
-            name: 'answer_3',
-            type: 'varchar',
-          },
-          {
-            name: 'answer_4',
-            type: 'varchar',
-          },
-          {
-            name: 'correct_answer',
-            type: 'varchar',
+            name: 'grade',
+            type: 'decimal',
+            precision: 4,
+            scale: 2,
+            isNullable: true,
           },
           {
             name: 'created_at',
