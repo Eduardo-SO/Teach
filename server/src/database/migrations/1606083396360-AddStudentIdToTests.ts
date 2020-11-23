@@ -5,13 +5,13 @@ import {
   TableForeignKey,
 } from 'typeorm'
 
-export class AddQuestionIdToTests1606088432239 implements MigrationInterface {
+export default class AddStudentIdToTests1606083396360
+  implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.addColumn(
       'tests',
-
       new TableColumn({
-        name: 'question_id',
+        name: 'student_id',
         type: 'uuid',
         isNullable: true,
       }),
@@ -20,9 +20,9 @@ export class AddQuestionIdToTests1606088432239 implements MigrationInterface {
     await queryRunner.createForeignKey(
       'tests',
       new TableForeignKey({
-        name: 'testQuestions',
-        columnNames: ['question_id'],
-        referencedTableName: 'questions',
+        name: 'testStudent',
+        columnNames: ['student_id'],
+        referencedTableName: 'students',
         referencedColumnNames: ['id'],
         onDelete: 'SET NULL',
         onUpdate: 'CASCADE',
@@ -31,8 +31,8 @@ export class AddQuestionIdToTests1606088432239 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropForeignKey('tests', 'testQuestions')
+    await queryRunner.dropForeignKey('tests', 'testStudent')
 
-    await queryRunner.dropColumn('tests', 'question_id')
+    await queryRunner.dropColumn('tests', 'student_id')
   }
 }
