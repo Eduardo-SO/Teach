@@ -4,23 +4,12 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
-  JoinColumn,
-  ManyToOne,
 } from 'typeorm'
-
-import Test from './Test'
 
 @Entity('questions')
 class Question {
   @PrimaryGeneratedColumn('uuid')
   id: string
-
-  @Column()
-  test_id: string
-
-  @ManyToOne(() => Test)
-  @JoinColumn({ name: 'test_id' })
-  test: Test
 
   @Column()
   question: string

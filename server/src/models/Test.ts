@@ -23,6 +23,9 @@ class Test {
   student: Student
 
   @Column()
+  questions: string
+
+  @Column()
   grade: number
 
   @Column(CreateDateColumn)
