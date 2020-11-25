@@ -19,19 +19,7 @@ export default class CreateQuestions1606081286681
             type: 'varchar',
           },
           {
-            name: 'answer_1',
-            type: 'varchar',
-          },
-          {
-            name: 'answer_2',
-            type: 'varchar',
-          },
-          {
-            name: 'answer_3',
-            type: 'varchar',
-          },
-          {
-            name: 'answer_4',
+            name: 'answers',
             type: 'varchar',
           },
           {

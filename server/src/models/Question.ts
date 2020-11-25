@@ -15,16 +15,7 @@ class Question {
   question: string
 
   @Column()
-  answer_1: string
-
-  @Column()
-  answer_2: string
-
-  @Column()
-  answer_3: string
-
-  @Column()
-  answer_4: string
+  answers: string
 
   @Column()
   correct_answer: string
