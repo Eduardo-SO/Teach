@@ -15,7 +15,7 @@ export default class CreateTests1605912870647 implements MigrationInterface {
           },
           {
             name: 'questions',
-            type: 'string',
+            type: 'varchar',
           },
           {
             name: 'grade',
