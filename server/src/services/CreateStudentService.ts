@@ -12,10 +12,10 @@ class CreateStudentService {
   public async execute({ name, email }: Request): Promise<Student> {
     const studentsRepository = getCustomRepository(StudentsRepository)
 
-    const findStudentWithSameEmail = await studentsRepository.findByEmail(email)
+    const studentWithSameEmail = await studentsRepository.findByEmail(email)
 
-    if (findStudentWithSameEmail) {
-      throw new Error('An account with this email already exists')
+    if (studentWithSameEmail) {
+      return studentWithSameEmail
     }
 
     const student = studentsRepository.create({
