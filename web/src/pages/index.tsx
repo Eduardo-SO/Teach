@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import Header from '../components/Header'
+import api from '../services/api'
 
+import Header from '../components/Header'
 import {
   Container,
   Wrapper,
@@ -20,6 +21,12 @@ interface Props {
 }
 
 const Home: React.FC<Props> = ({ toggleTheme }) => {
+  const handleInitTest = useCallback(async () => {
+    const response = await api.get('/questions')
+
+    console.log(response.data)
+  }, [])
+
   return (
     <>
       <Head>
@@ -56,7 +63,7 @@ const Home: React.FC<Props> = ({ toggleTheme }) => {
                   />
 
                   <Link href="/quiz">
-                    <a>Iniciar</a>
+                    <a onClick={() => handleInitTest()}>Iniciar</a>
                   </Link>
                 </form>
               </Apresentation>
