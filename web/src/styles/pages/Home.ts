@@ -125,6 +125,10 @@ export const Hero = styled.div`
       align-items: center;
     }
 
+    .first-hero {
+      margin-right: -150px;
+    }
+
     img {
       display: block;
       height: 75%;

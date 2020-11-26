@@ -61,7 +61,11 @@ const Home: React.FC<Props> = ({ toggleTheme }) => {
                 </form>
               </Apresentation>
               <Hero>
-                <img src="/images/hero1.svg" alt="Teach" />
+                <img
+                  src="/images/hero1.svg"
+                  className="first-hero"
+                  alt="Teach"
+                />
               </Hero>
             </Content>
 
