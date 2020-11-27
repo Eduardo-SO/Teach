@@ -86,12 +86,13 @@ export const Apresentation = styled.div`
       background: ${props => props.theme.colors.background.primary};
     }
 
-    a {
+    button {
       display: flex;
       align-items: center;
       justify-content: center;
 
       height: 4.5rem;
+      outline: 0;
       border: none;
       border-radius: 0 0 8px 8px;
 
@@ -100,6 +101,10 @@ export const Apresentation = styled.div`
 
       text-decoration: none;
       font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     input:nth-child(1) {

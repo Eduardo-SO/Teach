@@ -1,8 +1,9 @@
-import React, { useCallback } from 'react'
+import React, { FormEvent, useCallback, useState } from 'react'
+import { useRouter } from 'next/router'
 import Head from 'next/head'
-import Link from 'next/link'
 
 import api from '../services/api'
+import { useTest } from '../context/test'
 
 import Header from '../components/Header'
 import {
@@ -21,11 +22,33 @@ interface Props {
 }
 
 const Home: React.FC<Props> = ({ toggleTheme }) => {
-  const handleInitTest = useCallback(async () => {
-    const response = await api.get('/questions')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
 
-    console.log(response.data)
-  }, [])
+  const { setTest } = useTest()
+  const router = useRouter()
+
+  const handleInitTest = useCallback(
+    async (e: FormEvent) => {
+      e.preventDefault()
+
+      const studentResponse = await api.post('/students', {
+        name,
+        email
+      })
+
+      const testResponse = await api.post('/tests', {
+        student_id: studentResponse.data.id
+      })
+
+      setTest(testResponse.data)
+
+      router.push('/test')
+      setEmail('')
+      setName('')
+    },
+    [name, email]
+  )
 
   return (
     <>
@@ -54,17 +77,22 @@ const Home: React.FC<Props> = ({ toggleTheme }) => {
                   </li>
                 </ul>
 
-                <form>
-                  <input required placeholder="Informe seu nome" />
+                <form onSubmit={handleInitTest}>
                   <input
                     required
+                    value={name}
+                    onChange={e => setName(e.target.value)}
+                    placeholder="Informe seu nome"
+                  />
+                  <input
+                    required
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
                     type="email"
                     placeholder="Informe seu e-mail"
                   />
 
-                  <Link href="/quiz">
-                    <a onClick={() => handleInitTest()}>Iniciar</a>
-                  </Link>
+                  <button type="submit">Iniciar</button>
                 </form>
               </Apresentation>
               <Hero>

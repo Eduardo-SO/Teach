@@ -2,6 +2,7 @@ import React, { useCallback } from 'react'
 import { AppProps } from 'next/app'
 import { ThemeProvider, DefaultTheme } from 'styled-components'
 
+import { TestProvider } from '../context/test'
 import usePersistedState from '../utils/usePersistedState'
 
 import GlobalStyles from '../styles/global'
@@ -16,10 +17,12 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   }, [theme])
 
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} toggleTheme={toggleTheme} />
-      <GlobalStyles />
-    </ThemeProvider>
+    <TestProvider>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} toggleTheme={toggleTheme} />
+        <GlobalStyles />
+      </ThemeProvider>
+    </TestProvider>
   )
 }
 
