@@ -35,8 +35,8 @@ questionsRouter.get('/', async (request, response) => {
   return response.json(selectedQuestions)
 })
 
-questionsRouter.delete('/', async (request, response) => {
-  const { id } = request.body
+questionsRouter.delete('/:id', async (request, response) => {
+  const { id } = request.params
 
   try {
     const deleteQuestionService = new DeleteQuestionService()
