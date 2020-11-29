@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+interface CheckProps {
+  isChecked: boolean
+}
+
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -43,21 +47,6 @@ export const Content = styled.div`
     font-weight: 400;
     line-height: 100%;
   }
-
-  input + input {
-    margin-top: 2.4rem;
-  }
-`
-
-export const Answer = styled.div`
-  display: flex;
-  align-items: center;
-
-  margin-bottom: 2.4rem;
-
-  &:last-child {
-    margin: 0;
-  }
 `
 
 export const Navigation = styled.div`
@@ -87,4 +76,39 @@ export const Navigation = styled.div`
       margin-right: 1.6rem;
     }
   }
+`
+
+export const Answer = styled.button`
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 2.4rem;
+  border: 0;
+
+  background: transparent;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+`
+
+export const Check = styled.div<CheckProps>`
+  height: 1.6rem;
+  width: 1.6rem;
+
+  margin-right: 1.6rem;
+
+  border: 2px solid ${props => props.theme.colors.text.contrast};
+  border-radius: 4px;
+
+  background: ${props =>
+    props.isChecked
+      ? props.theme.colors.text.contrast
+      : props.theme.colors.text.secondary};
+
+  transition: background 0.2s;
 `

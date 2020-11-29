@@ -1,16 +1,16 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 import { AppProps } from 'next/app'
 import { ThemeProvider, DefaultTheme } from 'styled-components'
 
 import { TestProvider } from '../context/test'
-import usePersistedState from '../utils/usePersistedState'
+// import usePersistedState from '../utils/usePersistedState'
 
 import GlobalStyles from '../styles/global'
 import light from '../styles/themes/light'
 import dark from '../styles/themes/dark'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
-  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light)
+  const [theme, setTheme] = useState<DefaultTheme>(light)
 
   const toggleTheme = useCallback(() => {
     setTheme(theme.title === 'light' ? dark : light)
