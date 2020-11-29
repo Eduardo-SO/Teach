@@ -57,7 +57,7 @@ const Home: React.FC<Props> = ({ toggleTheme }) => {
       </Head>
 
       <main>
-        <Container>
+        <Container className=".container">
           <Header toggleTheme={toggleTheme} />
           <Wrapper>
             <Content>

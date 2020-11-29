@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 import api from '../services/api'
 import { useTest } from '../context/test'
 
 import Header from '../components/Header'
-// import Answer from '../components/Answer'
 
 import {
   Container,
@@ -14,7 +14,7 @@ import {
   Navigation,
   Answer,
   Check
-} from '../styles/pages/Quiz'
+} from '../styles/pages/Test'
 
 interface Props {
   toggleTheme(): void
@@ -36,10 +36,15 @@ const Home: React.FC<Props> = ({ toggleTheme }) => {
   const [questions, setQuestions] = useState<Question[]>()
   const [currentQuestion, setCurrentQuestion] = useState(1)
 
-  const { test } = useTest()
+  const route = useRouter()
+  const { test, setTest } = useTest()
 
   useEffect(() => {
     async function loadQuestions() {
+      if (!test.questions) {
+        return route.push('/')
+      }
+
       const response = await api.post('/tests/questions', {
         questions_id: test.questions
       })
@@ -107,16 +112,23 @@ const Home: React.FC<Props> = ({ toggleTheme }) => {
         }
       })
     })
-  }, [questions])
+
+    setTest({
+      ...test,
+      grade
+    })
+
+    route.push('/result')
+  }, [questions, test])
 
   return (
     <>
       <Head>
-        <title>Homepage</title>
+        <title>Teste</title>
       </Head>
 
       <main>
-        <Container>
+        <Container className=".container">
           <Header logo toggleTheme={toggleTheme} />
           <Wrapper>
             <Content>
