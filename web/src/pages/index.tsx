@@ -41,7 +41,9 @@ const Home: React.FC<Props> = ({ toggleTheme }) => {
         student_id: studentResponse.data.id
       })
 
-      setTest(testResponse.data)
+      const testData = testResponse.data
+
+      setTest({ ...testData, student_name: name, student_email: email })
 
       router.push('/test')
       setEmail('')

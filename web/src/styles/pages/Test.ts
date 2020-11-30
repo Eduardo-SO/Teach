@@ -9,6 +9,7 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
 
+  min-height: fit-content;
   height: 100vh;
 `
 
@@ -19,7 +20,7 @@ export const Wrapper = styled.div`
   height: 100%;
   width: 100%;
   max-width: 144rem;
-  padding: 0 4rem;
+  padding: 8rem 4rem 0;
 
   @media (min-width: 980px) {
     padding: 0 8rem;
@@ -45,7 +46,6 @@ export const Content = styled.div`
 
     font-size: 2.4rem;
     font-weight: 400;
-    line-height: 100%;
   }
 `
 
@@ -53,7 +53,7 @@ export const Navigation = styled.div`
   display: flex;
   justify-content: center;
 
-  margin-top: 8rem;
+  margin: 4rem 0 4rem;
 
   button {
     width: 16rem;

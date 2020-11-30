@@ -9,6 +9,8 @@ import React, {
 interface Test {
   id: string
   student_id: string
+  student_name: string
+  student_email: string
   questions: string
   grade?: number
 }
