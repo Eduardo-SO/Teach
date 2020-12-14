@@ -12,8 +12,8 @@ class SendEmailService {
       host: 'smtp.mailtrap.io',
       port: 2525,
       auth: {
-        user: '7315585dbd9607',
-        pass: '981820e06143bd',
+        user: '',
+        pass: '',
       },
     })
 
